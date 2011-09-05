@@ -65,6 +65,8 @@ class Curl extends AbstractClient implements ClientInterface
         }
 
         $response->fromString(static::getLastResponse($data));
+
+        return $response;
     }
 
     protected function prepare(Message\Request $request, Message\Response $response, $curl)

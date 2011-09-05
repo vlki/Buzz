@@ -52,5 +52,7 @@ class FileGetContents extends AbstractStream implements ClientInterface
         if ($cookieJar) {
             $cookieJar->processSetCookieHeaders($request, $response);
         }
+
+        return $response;
     }
 }

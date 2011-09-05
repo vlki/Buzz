@@ -16,6 +16,8 @@ class MultiCurl extends Curl implements BatchClientInterface
     public function send(Message\Request $request, Message\Response $response, $curl = null)
     {
         $this->queue[] = array($request, $response, $curl);
+
+        return null;
     }
 
     public function flush()
