@@ -49,5 +49,7 @@ abstract class AbstractQueue implements Client\ClientInterface
 
         $response->setHeaders($queued->getHeaders());
         $response->setContent($queued->getContent());
+
+        return $response;
     }
 }
